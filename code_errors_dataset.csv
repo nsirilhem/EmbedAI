@@ -1,0 +1,28 @@
+code,erreurs
+"int main() {int x; printf(""%d"", x); return 0;}",variable_non_initialisée
+int main() {float x = 'Hello' return 0;},type_incompatible
+int main() {int x = 5 return 0;},point_virgule_manquant
+int main() {int arr[3] arr[5] = 10;},out_of_bounds
+int main() {while(1) {}},boucle_infinie
+int main() {x = 10; return 0;},variable_non_déclarée
+int main() {int x = 10; if (x = 5) {}},affectation_dans_condition
+int main() {int a = 10; int a = 20; return 0;},redeclaration_variable
+int main() {int x = 10; x == 5; return 0;},expression_inutile
+int main() {int x; for (x = 0; x < 10; x++) {}},variable_non_initialisée
+int main() {int x; if (x = 5) {while(1) {}} return 0;},"variable_non_initialisée,affectation_dans_condition,boucle_infinie"
+int main() {int arr[5]; arr[10] = 20;},out_of_bounds
+int main() {float y = 10.5; char c = y;},type_incompatible
+int main() {int x = 10; if (x == 10) {}},point_virgule_manquant
+int main() {int x; int x;},redeclaration_variable
+int main() {int* p = malloc(sizeof(int) * 5);},malloc_sans_vérification
+int main() {int a; return 0;},"variable_non_initialisée,variable_non_utilisée"
+int main() {int a = 10; return 0;},aucune_erreur
+int main() {int x; int arr[5]; arr[x] = 2;},"variable_non_initialisée,out_of_bounds"
+"int main() {if (x == 5) printf(""OK"");}",variable_non_déclarée
+int main() {int x = 0; while(x < 5) {}},boucle_infinie
+int main() {int x = 0; if (x = 1) return 1;},affectation_dans_condition
+int main() {int a = 10; int b = 20; if (a = b) return 1;},affectation_dans_condition
+int main() {int x = 0; while (1) {if (x == 10) break;}},boucle_infinie
+int main() {char* str = 'Hello';},type_incompatible
+int main() {int a = 10; if ((a > 5) return 1;},"parenthèse_non_fermée,point_virgule_manquant"
+int main() {int a = 5; int b = 10; if a < b return 0;},"parenthèse_non_fermée,point_virgule_manquant"
